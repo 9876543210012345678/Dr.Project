@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function lov() {
+        const form = document.querySelector('form');
+        const username = document.querySelector('#username');
+        const password = document.querySelector('#password');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (username.value === 'hamza' && password.value === '12345600') {
+                window.location.href = "HtmlPage6.html";
+                alert('Login successful!');
+            }
+            else
+            {
+                // Code to submit form data to server goes here.
+                // For this example, we'll just show a message.
+                
+                alert('Please enter your username and password.');
+            }
+        });
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="password"] {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f5f5f5;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #3e8e41;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <div class="input-field">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <button type="submit" onclick="lov()">Login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

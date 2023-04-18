@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع عيادة طبيب</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+   
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show-menu');
+        });
+    </script>
+    <style>
+
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            float: right;
+            right: 20px
+        }
+
+            .menu li {
+                margin-right: 20px;
+            }
+
+                .menu li:last-child {
+                    margin-right: 0;
+                }
+
+            .menu a {
+                color: #333;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+                .menu a:hover {
+                    color: #666;
+                }
+
+        body {
+            background-image: url("https://alghad.com/wp-content/uploads/2019/04/%D8%B7%D8%A8%D9%8A%D8%A82.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .news-bar {
+            background-color: #333;
+            color: #fff;
+            height: 70px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px;
+        }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin-left: 10px;
+                }
+
+                    nav ul li a {
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 10px;
+                    }
+
+                        nav ul li a:hover {
+                            background-color: #777;
+                        }
+
+        /* تخصيص الصورة */
+        .image-container {
+            <img src""> text-align: center;
+            margin: 20px;
+        }
+
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+            }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .btn {
+            float: right;
+        }
+
+        /* تخصيص النص */
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 32px;
+            line-height: 1.5;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #FFF;
+            border: none;
+            padding: 1px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #3e8e41;
+            }
+       
+    </style>
+
+</head>
+<body>
+
+    <script src="script.js"></script>
+   
+    <nav class="menu-container">
+        <select>
+            <option>اتصل بنا</option>
+            <option disabled selected>0772324946</option>
+            <option disabled selected>0772380830</option>
+        </select>
+        <ul class="menu">
+
+            <li><a href="HtmlPage6.html">الدخول الى عيادة الطبيب</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+    <header>
+        <h1>عيادة الدكتورة زينب الفلايلة</h1>
+    </header>
+
+    <main>
+        <h1>مرحبًا بك في عيادة الدكتورة زينب</h1>
+        <p>
+            نحن نقدم خدمات طبية عالية الجودة لجميع المرضى في كل الأعمار. لدينا فريق من أفضل الأطباء والممرضين
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="news-bar">
+            اخبار العيادة
+            <marquee behavior="scroll" direction="left">
+                نحن نفتح ابوابنا لجميع الزوار
+            </marquee>
+        </div>
+    </footer>
+</body>
+</html>

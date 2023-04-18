@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function lo {
+            // قم بجمع مدخلات النموذج وتخزينها في متغيرات
+            var fullName = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+
+            // تحقق من صحة مدخلات النموذج
+            if (fullName == "" && phone == "" && email == "" && date == "" && time == "") {
+                alert("Login successful!");
+                //    window.location = "dashboard.html"; // Replace with actual dashboard URL
+            }
+            else {
+                alert("المدخلات غير صحيحة");
+            }
+            return false;
+        }
+    </script>
+    <style>
+        div {
+            height: 200px;
+            overflow: auto;
+        }
+        body {
+            background-image: url("cdc68bca-60de-4f0a-94eb-447ac63fca3a.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section id="appointment">
+            <h2>حجز موعد</h2>
+            <form action="book_appointment.php" method="post">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="date">تاريخ الموعد:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">وقت الموعد:</label>
+                <input type="time" id="time" name="time" required>
+                <button type="submit" onclick="lo()">حجز الموعد</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

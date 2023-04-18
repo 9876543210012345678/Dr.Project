@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function hh() { 
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var formdata = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://example.com/process-booking.php');
+            xhr.send(formdata);
+            // إضافة رسالة تأكيد الحجز إلى الصفحة
+            var confirmation = document.createElement('p');
+            confirmation.textContent = 'تم استلام طلب الحجز بنجاح';
+        }
+    </script>
+    <style>
+       h1{
+           text-align:center;
+       }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+    </style>
+</head>
+<body>
+    
+    <h1 >حجز موعد في العيادة</h1>
+    <form>
+        <label for="name">الاسم:</label>
+        <input type="text" placeholder="أدخل الاسم كامل"id="name" name="name" required><br><br>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" placeholder="يرجى ادخال البريد الأكتروني" id="email" name="email" required><br><br>
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" placeholder="يرجى ادخال رقم الهاتف" id="phone" name="phone" required><br><br>
+        <label for="date">تاريخ الحجز:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="time">وقت الحجز:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        <input type="submit" onclick="hh()" value="حجز">
+    </form>
+</body>
+</html>

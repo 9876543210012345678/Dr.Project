@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function loc() {
+            window.location.href = "HtmlPage5.html";
+        }
+    </script>
+    <script>
+        function log() {
+            window.location.href = "HtmlPage1.html";
+        }
+    </script>
+    <script>
+        function logout() {
+            window.location.href = "HtmlPage2.html";
+        }
+    </script>
+   
+    <style>
+        .container {
+            display: grid;
+            float: right;
+        }
+
+        .group-menu {
+            cursor: pointer;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: black;
+            margin-top: 4px;
+        }
+
+        .frame1 {
+            visibility: hidden;
+        }
+
+            .frame1 .info {
+                font-size: 20px;
+                color: black;
+                border-bottom: 1px solid black;
+                padding-top: 13px;
+                cursor: pointer;
+            }
+
+                .frame1.info:hover {
+                    background-color: aliceblue;
+                }
+
+                .frame1.info:hover {
+                    margin-left: 10px;
+                }
+
+                .frame1.info span {
+                }
+
+        .style {
+            width: 200px;
+            height: 300px;
+            background-color: aliceblue;
+            margin-top: 5px;
+            margin-left: -180px;
+            border-radius: 10px;
+        }
+
+        body {
+            background-image: url('cdc68bca-60de-4f0a-94eb-447ac63fca3a.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /*div {
+            height: 200px;
+            overflow: auto;
+        }*/
+
+        .text-right {
+            text-align: right;
+        }
+
+        .news-bar {
+            background-color: #333;
+            color: #fff;
+            height: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        nav {
+            color: #fff;
+            display: flex;
+            /*justify-content: space-between;*/
+            align-items: center;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #FFF;
+            border: none;
+            padding: 1px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        main {
+            color: black;
+            border: none;
+            padding: 1px 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+
+        <button onclick="loc()">حجز الموعد</button>
+
+    </nav>
+    
+    <div class="container">
+        <div class="group-menu" onclick="fun()">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="frame1" id="frame1">
+            <div class="info" onclick="log()"><span>الصفحة الرئيسية</span></div>
+            <div class="info" onclick="logout()"><span>تسجيل الخروج</span></div>
+            <div class="info" onclick="remove()"><span>exit</span></div>
+        </div>
+
+    </div>
+
+    <script>
+        function fun() {
+            document.getElementById("frame1").style.visibility = "visible";
+            document.getElementById("frame1").classList.add("style");
+        }
+
+        function remove() {
+            document.getElementById("frame1").classList.add("style");
+            document.getElementById("frame1").style.visibility = "hidden";
+        }
+    </script>
+    <nav>
+        <select>
+            <option value="option3">الخدمات</option>
+            <option value="option3">نسائية وتوليد</option>
+            <option value="option3">اوقات الدوام</option>
+            <option value="option4">الكشف الطبي</option>
+            <option value="option4">العلاج الدوائي</option>
+            <option value="option4">العلاج الطبيعي</option>
+            <option value="option4">التحاليل الطبية</option>
+        </select>
+        <select>
+            <option value="option4">الأطباء</option>
+            <option value="option4">الطبيب الأول</option>
+            <option value="option4">الطبيب الثاني</option>
+            <option value="option4">الطبيب الثالث</option>
+        </select>
+    </nav>
+    <main>
+        <article>
+            <h2 class="text-right">خدمات عيادة الطبيب</h2>
+            <section>
+                <h3 class="text-right">العلاج النفسي</h3>
+                <p class="text-right">نحن نقدم خدمات العلاج النفسي لمرضى الاكتئاب والقلق والتوتر والصدمات النفسية.</p>
+            </section>
+            <section>
+                <h3 class="text-right">العناية بالأسنان</h3>
+                <p class="text-right">نحن نقدم خدمات العناية بالأسنان بما في ذلك التنظيف والحشوات والجذور وتقويم الأسنان.</p>
+            </section>
+            <section>
+                <h3 class="text-right">العلاج الطبيعي</h3>
+                <p class="text-right">نحن نقدم خدمات العلاج الطبية
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="news-bar">
+            <marquee behavior="scroll" direction="left">نحن نقدم خدمات طبية ممتازة للمرضى</marquee>
+        </div>
+    </footer>
+</body>
+</html>

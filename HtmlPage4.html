@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function signupbtn() {
+            window.location.href = "HtmlPage2.html";
+        }
+    </script>
+    <script>
+        function book() {
+            // قم بجمع مدخلات النموذج وتخزينها في متغيرات
+            var fullName = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+
+            // تحقق من صحة مدخلات النموذج
+            if (fullName == "hamza hani" || phone == "0772324946" || email == "hamza20.hani20@gmail.com" || date == "" || time == "") {
+                window.location.href = "HtmlPage2.html";
+                alert("يرجى ملء جميع الحقول");
+               
+            }
+             else {
+                alert("Invalid username or password!");
+            }
+    </script>
+    <style>
+        body {
+            background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-health-center-clinic-advertisement-medical-equipment-medical-equipment-image_34987.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /*add full-width input fields*/
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        /* set a style for the main container */
+        .main-container {
+            direction: rtl;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 700px;
+        }
+
+
+        /* set a style for all buttons*/
+
+        button {
+            background-color: Green;
+            color: white;
+            padding: 15px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+        }
+        /*set styles for the cancel button*/
+
+        .cancelbtn {
+            padding: 15px 20px;
+            background-color: #FF2E00;
+        }
+        /*float cancel and signup buttons and add an equal width*/
+
+        .cancelbtn,
+        .signupbtn {
+            float: left;
+            width: 50%;
+        }
+        /*add padding to container elements*/
+
+        .container {
+            padding: 16px;
+        }
+        /*clear floats*/
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        /*styles for cancel button and signup button
+            on extra small screens*/
+
+        @media screen and (max-width: 300px) {
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h2>إنشاء حساب جديد</h2>
+        <!--Step 1:Adding HTML-->
+        <form action="/action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+                <label><b>الاسم الاول</b></label>
+                <input type="text" placeholder="أدخل الاسم الاول" name="nam" required>
+
+                <label><b>البريد الالكتروني</b></label>
+                <input type="text" placeholder="أدخل بريدك الالكتروني هنا" name="email" required>
+
+                <label><b>كلمة السر</b></label>
+                <input type="password" placeholder="كلمة السر" name="psw" required>
+
+                <label><b>تأكيد كلمة السر </b></label>
+                <input type="password" placeholder="تأكيد كلمة السر" name="psw-repeat" required>
+                <input type="checkbox" checked="checked"> تذكرني
+                <p>لإنشاء حساب، يجب الموافقة على <a href="#"> شروط الاستخدام & الخصوصية </a>.</p>
+
+                <div>
+                    <button onclick="button()">إلغاء الأمر</button>
+                    <button onclick ="book()">إنشاء حساب</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

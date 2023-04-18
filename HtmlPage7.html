@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>عيادة طبيب نسائية وتوليد</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <script>
+        function lo() {
+            const form = document.querySelector('#appointment-form');
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                // Get the form data
+                const name = document.querySelector('#name').value;
+                const email = document.querySelector('#email').value;
+                const date = document.querySelector('#date').value;
+                const time = document.querySelector('#time').value;
+                const notes = document.querySelector('#notes').value;
+
+                // Do something with the data, such as sending it to a server
+                console.log(name, email, date, time, notes);
+
+                // Reset the form
+                form.reset();
+            });
+
+
+    </script>
+    <style>
+        form {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin: 20px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+
+             .news-bar {
+            background-color: #333;
+            color: #fff;
+            height: 70px;
+            padding: 10px;
+            text-align:start;
+            font-size: 18px;
+            position:fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id="appointment-form">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">تاريخ الحجز:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">وقت الحجز:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="notes">ملاحظات:</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="submit" onclick="lo()">حجز</button>
+    </form>
+     
+    <div class="news-bar">
+    <footer>
+        ih
+        <marquee behavior ="scroll"  direction="left" > 
+        hg
+        </marquee>
+    </footer>
+    </div>
+</body>
+</html>
